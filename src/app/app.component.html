@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">        
+    <mat-toolbar-row>
+        <span>Third Line</span>
+        <span class="mattoolbar-spacer"></span>
+        <mat-icon class="mattoolbar-icon" 
+            aria-hidden="false" 
+            aria-label="mattoolbar heart icon">
+            <a href="https://www.google.com">account_circle</a>
+        </mat-icon>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>drag_indicator</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>dialpad</mat-icon>
+                <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+                <mat-icon>voicemail</mat-icon>
+                <span>Check voicemail</span>
+            </button>                
+            </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
